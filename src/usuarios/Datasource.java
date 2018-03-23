@@ -21,7 +21,9 @@ public class Datasource {
         FileInputStream fis = null;
         SQLiteDataSource datasource = null;
         try {
-            fis = new FileInputStream("ConectUsers.properties");
+            //Netbeans.
+            //fis = new FileInputStream("ConectUsers.properties");
+            fis = new FileInputStream("E:/Usuarios/Usuarios/ConectUsers.properties");
             props.load(fis);
             datasource = new SQLiteDataSource();
             datasource.setUrl(props.getProperty("SQLLITE_DB_URL"));

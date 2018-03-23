@@ -33,6 +33,7 @@ public class Registro {
             System.out.print(" ");
             email=teclado.nextLine();
             callregistro.Exit(email, null);
+            
             System.out.println("Ingresa su Contrasenia:");
             System.out.print(" ");
             password=teclado.nextLine();

@@ -10,6 +10,7 @@ package usuarios;
  * @author JSarmiento
  */
 import java.io.Console;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Login {
@@ -39,7 +40,11 @@ public class Login {
             }else{
                 c.printf(" ");
                 char[] pass = c.readPassword("Ingrese Contraseña: ");
-                password=pass.toString();
+                for(int i=0; i<pass.length;i++){
+                    password=password + Character.toString(pass[i]);
+                }
+                //password=Arrays.toString(pass);
+                System.out.println(password);
             }
             callLogin.Cancelar(null, password);
             ValidarMail callValidator = new ValidarMail();
